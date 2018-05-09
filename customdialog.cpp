@@ -11,6 +11,12 @@ customDialog::customDialog(QWidget *parent) :
     connect(ui->buttonBox, SIGNAL(accepted()), this, SLOT(ok_accepted()));
     QWidget::setTabOrder(ui->lineEdit_1, ui->lineEdit_2);
     QWidget::setTabOrder(ui->lineEdit_2, ui->lineEdit_3);
+    ui->lineEdit_1->setEchoMode(QLineEdit::Normal);
+    ui->lineEdit_2->setEchoMode(QLineEdit::Normal);
+    ui->lineEdit_3->setEchoMode(QLineEdit::Normal);
+    ui->lineEdit_1->setPlaceholderText("8-30");
+    ui->lineEdit_2->setPlaceholderText("10-50");
+    ui->lineEdit_3->setPlaceholderText("15-200");
 }
 
 customDialog::~customDialog()
